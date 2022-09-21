@@ -1,0 +1,40 @@
+---
+- title: nome em branco
+  payload:
+    name: ''
+    email: ana@bol.com
+    password: teste123
+  code: 412
+  error: required name
+- title: sem campo nome
+  payload:
+    email: ana@bol.com
+    password: teste123
+  code: 412
+  error: required name
+- title: email em branco
+  payload:
+    name: Ana
+    email: ''
+    password: teste123
+  code: 412
+  error: required email
+- title: sem o campo email
+  payload:
+    name: Ana
+    password: teste123
+  code: 412
+  error: required email
+- title: senha em branco
+  payload:
+    name: Ana
+    email: ana@bol.com
+    password: ''
+  code: 412
+  error: required password
+- title: sem o campo senha
+  payload:
+    name: Ana
+    email: ana@bol.com
+  code: 412
+  error: required password

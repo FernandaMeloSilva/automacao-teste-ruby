@@ -1,0 +1,35 @@
+---
+- title: senha incorreta
+  payload:
+    email: fernanda@log.com
+    password: '123'
+  code: 401
+  error: Unauthorized
+- title: usuario nao existe
+  payload:
+    email: fernanda@gmail.com
+    password: teste123
+  code: 401
+  error: Unauthorized
+- title: email em branco
+  payload:
+    email: ''
+    password: teste123
+  code: 412
+  error: required email
+- title: sem o campo email
+  payload:
+    password: teste123
+  code: 412
+  error: required email
+- title: senha em branco
+  payload:
+    email: fernanda@log.com
+    password: ''
+  code: 412
+  error: required password
+- title: seem o campo senha
+  payload:
+    email: fernanda@log.com
+  code: 412
+  error: required password
