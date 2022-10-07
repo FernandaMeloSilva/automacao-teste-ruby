@@ -26,7 +26,7 @@ describe "POST /signup" do
     end
 
     it "deve retornar 409" do
-      expect(@result.code).to eql 412
+      expect(@result.code).to eql 409
     end
 
     it "deve retornar mensagem" do
